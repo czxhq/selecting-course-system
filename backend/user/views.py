@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 import json
-import db  # 导入数据库类
+import db
 
 
 def change_password(request):

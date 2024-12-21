@@ -11,8 +11,7 @@ def get_courses(request):
         student_id = body.get('studentId')
 
         # 根据学生ID获取其选修的课程
-        # 这里需要定义学生与课程的关系，暂时使用示例数据
-        courses = db.get_courses(student_id)  # 您需要根据实际情况过滤课程
+        courses = db.get_courses(student_id)
         courses = [list(course) for course in courses]
         results = {}
         for course in courses:
@@ -41,8 +40,7 @@ def course_details(request):
         student_id = body.get('studentId')
 
         # 根据学生ID获取其选修的课程
-        # 这里需要定义学生与课程的关系，暂时使用示例数据
-        courses = db.course_details(student_id)  # 您需要根据实际情况过滤课程
+        courses = db.course_details(student_id)
 
         courses = [list(course) for course in courses]
         results = {}

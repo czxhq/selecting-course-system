@@ -135,14 +135,12 @@ def get_course_details(request):
         course_id = body.get('courseId')
 
         # 获取课程基本信息
-        # course_info = db.get_course_info(course_id)
         course_info, reviews, questions = db.get_course_details(course_id)
 
         if not course_info:
             return JsonResponse({"result": "failed", "message": "课程不存在"})
 
         # 获取课程评价
-        # reviews = db.get_course_reviews(course_id)
         course_reviews = []
         for review in reviews:
             course_reviews.append({
@@ -152,7 +150,6 @@ def get_course_details(request):
             })
 
         # 获取课程问答
-        # questions = db.get_course_answered_questions(course_id)
         course_qna = []
         for question in questions:
             answer = question[6] if question[6] else "暂无回答"
