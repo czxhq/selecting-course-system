@@ -1,4 +1,17 @@
 # 学生选课管理系统
+###  Project setup
+#### Frontend
+
+```vue
+npm install
+npm run dev
+```
+
+#### Backend
+
+```python
+python manage.py runserver 8000
+```
 
 ### 1. 项目说明
 
